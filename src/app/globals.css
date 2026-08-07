@@ -1,0 +1,114 @@
+@import 'tailwindcss';
+
+/* Explicit source root alongside Tailwind v4's automatic detection. */
+@source '../';
+
+/* ---------------------------------------------------------------------------
+   Brand tokens. Navy + white with red accents.
+   Red is reserved for calls-to-action so it never competes with itself --
+   if everything is red, nothing is the button.
+--------------------------------------------------------------------------- */
+@theme {
+  --color-navy-50: #f2f6fb;
+  --color-navy-100: #e2eaf5;
+  --color-navy-200: #c4d4e9;
+  --color-navy-300: #94b0d3; /* 6.89:1 on navy-900 -- the lightest body text on dark */
+  /*
+   * navy-400 clears 3:1 (borders, icons, disabled states) but only 3.87:1 on
+   * white and 3.98:1 on navy-900, so it must NOT be used for body text.
+   * Use navy-500 on light backgrounds and navy-300 on dark.
+   */
+  --color-navy-400: #5c84b6;
+  --color-navy-500: #37619a; /* 6.29:1 on white */
+  --color-navy-600: #1e5299;
+  --color-navy-700: #16407a;
+  --color-navy-800: #10305a;
+  --color-navy-900: #0b2545;
+  --color-navy-950: #061529;
+
+  /*
+   * red-400 is the on-navy accent (eyebrows, icons, small labels). It has to
+   * clear 4.5:1 against the LIGHTEST navy it ever sits on -- navy-800, used by
+   * the hero/city pills -- not just navy-900. The old #e8455c managed only
+   * 3.41:1 there. #ff7d8f gives 5.39:1 on navy-800 and 6.29:1 on navy-900.
+   * It is never used as text on white (2.45:1), only red-600/700 are.
+   */
+  --color-brand-red-400: #ff7d8f;
+  --color-brand-red-500: #e01937;
+  --color-brand-red-600: #c8102e; /* 5.88:1 on white */
+  --color-brand-red-700: #a50d26; /* 7.82:1 on white */
+  --color-brand-red-800: #820a1e;
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-display: var(--font-display), var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+
+  --shadow-card: 0 1px 2px rgb(6 21 41 / 0.06), 0 8px 24px -12px rgb(6 21 41 / 0.18);
+  --shadow-lift: 0 2px 4px rgb(6 21 41 / 0.08), 0 16px 40px -16px rgb(6 21 41 / 0.28);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    /* Offset for the sticky header when jumping to #anchors. */
+    scroll-padding-top: 6rem;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  body {
+    @apply bg-white font-sans text-navy-900 antialiased;
+    /* Room for the sticky mobile call bar so it never covers page content. */
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display tracking-tight text-balance;
+  }
+
+  /* Visible, high-contrast focus for keyboard users on every interactive thing. */
+  :where(a, button, input, select, textarea, summary, [tabindex]):focus-visible {
+    @apply outline-2 outline-offset-2 outline-brand-red-600;
+  }
+
+  /* Native validation styling is inconsistent; the form handles its own errors. */
+  input,
+  select,
+  textarea {
+    @apply text-base;
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Lightweight readable-text styles -- avoids pulling in the typography plugin. */
+  .prose-local p {
+    @apply mb-4 text-[1.0625rem] leading-relaxed text-navy-800;
+  }
+  .prose-local p:last-child {
+    @apply mb-0;
+  }
+  .prose-local a {
+    @apply font-semibold text-navy-700 underline decoration-navy-300 underline-offset-2 hover:decoration-brand-red-600;
+  }
+  .prose-local strong {
+    @apply font-semibold text-navy-900;
+  }
+}
