@@ -52,7 +52,7 @@ export default function AboutPage() {
                 eyebrow={`Family owned since ${business.foundedYear}`}
                 tone="dark"
                 title="A small shop that stayed small on purpose"
-                intro="Kauffman has been working on garage doors out of Gainesville for over forty years. Same family, same town, same phone number."
+                intro="Kauffman has been working on garage doors out of the Atlanta area for over forty years. Same family, same town, same phone number."
               />
               <div className="mt-8">
                 <CallButton location="about-hero" size="lg" subLabel="Call now — we answer" />
@@ -79,7 +79,7 @@ export default function AboutPage() {
               Four decades in one place
             </h2>
             <p className="mt-4">
-              We started working on garage doors in Hall County in {business.foundedYear} and never
+              We started working on garage doors in Atlanta in {business.foundedYear} and never
               moved. In that time the area has changed enormously — subdivisions where there were
               pastures, a lake shoreline that filled in, and an Atlanta metro that keeps creeping
               north. The doors changed too. What has not changed is how we work.
@@ -135,11 +135,11 @@ export default function AboutPage() {
               <dl className="mt-4 space-y-4 text-sm">
                 <div>
                   <dt className="font-semibold text-navy-900">Founded</dt>
-                  <dd className="text-navy-600">{business.foundedYear}, Gainesville, Georgia</dd>
+                  <dd className="text-navy-600">{business.foundedYear}, Atlanta, Georgia</dd>
                 </div>
                 <div>
                   <dt className="font-semibold text-navy-900">Ownership</dt>
-                  <dd className="text-navy-600">Family owned and operated</dd>
+                  <dd className="text-navy-600">Father and son. Family owned and operated</dd>
                 </div>
                 <div>
                   <dt className="font-semibold text-navy-900">Legal name</dt>

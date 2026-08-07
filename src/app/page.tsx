@@ -196,7 +196,7 @@ export default function HomePage() {
               <SectionHeading
                 eyebrow="Why Kauffman"
                 title="Forty years of the same phone number"
-                intro="We started working on garage doors in Hall County in 1984 and never left. We are not a franchise, not a private-equity roll-up, and not a call center routing your job to whoever answers."
+                intro="We started working on garage doors in Atlanta in 1984 and never left the area. We are not a franchise, not a private-equity roll-up, and not a call center routing your job to whoever answers."
               />
 
               <div className="prose-local mt-6">
