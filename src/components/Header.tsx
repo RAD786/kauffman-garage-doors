@@ -46,7 +46,7 @@ export function Header() {
       <div className="hidden bg-navy-900 text-navy-100 lg:block">
         <div className="container-page flex h-9 items-center justify-between text-xs">
           <p className="font-medium">
-            Family owned since {business.foundedYear} &middot; Serving Gainesville and North Georgia
+            Family owned since {business.foundedYear} &middot; Serving Atlanta and North Georgia
           </p>
           <div className="flex items-center gap-5">
             <span className="inline-flex items-center gap-1.5">

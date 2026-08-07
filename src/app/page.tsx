@@ -28,7 +28,7 @@ import Image from "next/image";
 export const metadata: Metadata = buildMetadata({
   title: `${business.name} | Repair & Install, Gainesville GA`,
   description:
-    'Family owned garage door repair, installation and openers in Gainesville and North Georgia. In business since 1984. Call (770) 554-9990.',
+    'Family owned garage door repair, installation and openers in Atlanta and North Georgia. In business since 1984. Call (770) 554-9990.',
   path: '/',
 })
 
