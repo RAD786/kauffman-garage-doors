@@ -55,7 +55,7 @@ export default function HomePage() {
           <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-14">
             <div>
               <p className="inline-flex items-center gap-2 rounded-full bg-navy-800 px-3.5 py-1.5 text-xs font-bold uppercase tracking-[0.14em] text-brand-red-400 ring-1 ring-navy-700">
-                Gainesville, GA · Since {business.foundedYear}
+                Serving the Atlanta area · Since 1984
               </p>
 
               <h1 className="mt-5 text-4xl font-extrabold leading-[1.05] text-white sm:text-5xl lg:text-6xl">
@@ -64,8 +64,8 @@ export default function HomePage() {
               </h1>
 
               <p className="mt-5 max-w-xl text-lg leading-relaxed text-navy-200">
-                A family shop out of Gainesville that has been fixing and installing garage doors
-                across North Georgia for over forty years. Broken springs, dead openers, doors off
+                A family shop that has been fixing and installing garage doors
+                across the Atlanta area for over forty years. Broken springs, dead openers, doors off
                 track, full replacements. Call us and you get a person who knows doors, not a
                 script.
               </p>
@@ -314,7 +314,7 @@ export default function HomePage() {
         <div className="container-page py-16 lg:py-20">
           <SectionHeading
             eyebrow="Where we work"
-            title="Serving Gainesville and North Georgia"
+            title="Serving Atlanta-metro, Gainesville and North Georgia"
             intro="Based in Gainesville, covering Hall, Forsyth, Jackson, Gwinnett, Dawson and White counties, plus the north Atlanta metro. If you are near the edge of that, call and ask — we will give you a straight answer."
           />
 

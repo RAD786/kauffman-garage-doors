@@ -52,7 +52,7 @@ export const business = {
    * covered" number in the trust bar and the county list in the footer, so the
    * two can never disagree.
    */
-  counties: ['Hall', 'Forsyth', 'Jackson', 'Gwinnett', 'Dawson', 'White', 'Fulton'],
+  counties: ['Hall', 'Forsyth', 'Jackson', 'Gwinnett', 'Dawson', 'White', 'Fulton', 'Gwinnett'],
 
   hours: [
     { days: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'], opens: '07:30', closes: '17:00' },
@@ -76,7 +76,7 @@ export const business = {
    */
   facts: [
     'Family owned and operated',
-    'Serving North Georgia since 1984',
+    'Servicing Atlanta 40+ years',
     'We answer our own phone',
     'Straight answers on repair vs. replace',
   ],
