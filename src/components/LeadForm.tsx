@@ -4,7 +4,7 @@ import { useActionState, useEffect, useId, useRef } from 'react'
 import { useFormStatus } from 'react-dom'
 import { usePathname } from 'next/navigation'
 import { submitLead } from '@/app/actions'
-import { initialFormState, serviceOptions, urgencyOptions } from '@/lib/leads'
+import { initialFormState, serviceOptions, urgencyOptions, HONEYPOT_FIELD } from '@/lib/leads'
 import { business } from '@/data/business'
 import { citiesByPriority } from '@/data/cities'
 import { AlertIcon, CheckIcon, PhoneIcon } from './icons'
@@ -155,10 +155,22 @@ export function LeadForm({
       {/* Context for the notification email -- not user-editable. */}
       <input type="hidden" name="sourcePath" value={pathname} />
 
-      {/* Honeypot. Hidden from humans and from assistive tech; bots fill it in. */}
+      {/* Honeypot. Hidden from humans and assistive tech; bots fill it in.
+          The field name comes from HONEYPOT_FIELD and is deliberately
+          meaningless -- see the note there. Do not rename it to anything a
+          browser might recognise, or real submissions get discarded. */}
       <div aria-hidden="true" className="absolute left-[-9999px] h-0 w-0 overflow-hidden">
-        <label htmlFor={id('company')}>Company (leave blank)</label>
-        <input id={id('company')} type="text" name="company" tabIndex={-1} autoComplete="off" />
+        <label htmlFor={id(HONEYPOT_FIELD)}>Leave this field blank</label>
+        <input
+          id={id(HONEYPOT_FIELD)}
+          type="text"
+          name={HONEYPOT_FIELD}
+          tabIndex={-1}
+          autoComplete="off"
+          data-1p-ignore
+          data-lpignore="true"
+          data-form-type="other"
+        />
       </div>
 
       <div className="grid gap-5 sm:grid-cols-2">

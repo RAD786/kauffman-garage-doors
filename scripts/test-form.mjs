@@ -82,7 +82,7 @@ console.log(`\n4) valid submit -> action POST ${res.status()}, success state ren
 
 // --- 5. Honeypot should be invisible to users but present in the DOM -------
 await page.goto(`${BASE}/contact`, { waitUntil: 'networkidle0' })
-const honeypot = await page.$eval('input[name="company"]', (el) => {
+const honeypot = await page.$eval('input[name="kgd_ref_2"]', (el) => {
   const r = el.getBoundingClientRect()
   return { onScreen: r.right > 0 && r.left < window.innerWidth, tabIndex: el.tabIndex }
 })

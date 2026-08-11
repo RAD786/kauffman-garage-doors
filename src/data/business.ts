@@ -82,8 +82,15 @@ export const business = {
   ],
 } as const
 
+/**
+ * Canonical origin. MUST match the primary domain configured in Vercel --
+ * Vercel serves www as primary and 308-redirects the apex to it, so the
+ * fallback is www. A canonical pointing at a URL that redirects is a
+ * self-contradicting signal on every page, so if the primary domain ever
+ * changes, change this (and NEXT_PUBLIC_SITE_URL in Vercel) with it.
+ */
 export const siteUrl = (
-  process.env.NEXT_PUBLIC_SITE_URL || 'https://kauffmangarage.com'
+  process.env.NEXT_PUBLIC_SITE_URL || 'https://www.kauffmangarage.com'
 ).replace(/\/$/, '')
 
 /** Absolute URL builder -- required for canonicals, OG tags and JSON-LD @id values. */

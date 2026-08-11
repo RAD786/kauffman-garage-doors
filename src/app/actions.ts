@@ -1,6 +1,6 @@
 'use server'
 
-import { deliverLead, validateLead, type FormState } from '@/lib/leads'
+import { deliverLead, validateLead, HONEYPOT_FIELD, type FormState } from '@/lib/leads'
 
 /**
  * Server action behind the lead form. Using an action rather than a client-side
@@ -19,11 +19,25 @@ export async function submitLead(prev: FormState, formData: FormData): Promise<F
   }
 
   // Values to hand back on a rejected submit, minus the honeypot.
-  const echo = () => Object.fromEntries(Object.entries(raw).filter(([k]) => k !== 'company'))
+  const echo = () => Object.fromEntries(Object.entries(raw).filter(([k]) => k !== HONEYPOT_FIELD))
 
-  // Honeypot: a hidden field no human ever fills in. Bots fill everything.
-  // Respond with the success state so the bot does not learn it was caught.
-  if (raw.company) {
+  /*
+   * Honeypot: a hidden field no human fills in. Bots fill everything.
+   *
+   * This branch discards the submission while showing the success state, so it
+   * MUST log -- otherwise a false positive looks identical to a delivered lead
+   * from both the customer's side and the server logs. The field was previously
+   * named "company", which browser autofill and password managers happily fill
+   * even though it is off-screen and autocomplete="off". Real customers were
+   * being silently classified as bots. The name is now meaningless so no
+   * autofill heuristic recognises it.
+   */
+  if (raw[HONEYPOT_FIELD]) {
+    console.warn(
+      `[lead] Honeypot tripped -- submission discarded. name="${raw.name ?? ''}" ` +
+        `phone="${raw.phone ?? ''}" from="${raw.sourcePath ?? ''}". ` +
+        `If this was a real person, the honeypot field name is being autofilled.`
+    )
     return {
       status: 'success',
       message: 'Thanks — your request came through.',

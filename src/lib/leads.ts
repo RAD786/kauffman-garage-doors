@@ -18,6 +18,15 @@ export type Lead = {
 
 export type FieldErrors = Partial<Record<keyof Lead, string>>
 
+/**
+ * Name of the hidden anti-bot field. Deliberately meaningless: anything
+ * recognisable ("company", "website", "fax") gets filled by browser autofill
+ * and password managers even when the input is off-screen with
+ * autocomplete="off", which silently discards real leads.
+ * Shared so the form and the action can never disagree about the name.
+ */
+export const HONEYPOT_FIELD = 'kgd_ref_2'
+
 export type FormState = {
   status: 'idle' | 'success' | 'error'
   message: string
@@ -226,9 +235,16 @@ export async function deliverLead(lead: Lead): Promise<{ delivered: boolean; cha
           html: leadAsHtml(lead),
         }),
       })
-        .then((res) => {
-          if (res.ok) channels.push('email')
-          else console.error('[lead] Resend rejected the send:', res.status)
+        .then(async (res) => {
+          if (res.ok) {
+            channels.push('email')
+            return
+          }
+          // Log the body, not just the status. Resend's failure reasons are all
+          // in the body -- unverified domain, from-address not on that domain,
+          // bad key -- and a bare "403" tells you none of them.
+          const body = await res.text().catch(() => '(no body)')
+          console.error(`[lead] Resend rejected the send: ${res.status} ${body}`)
         })
         .catch((err) => console.error('[lead] Resend request failed:', err))
     )
