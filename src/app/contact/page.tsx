@@ -15,7 +15,7 @@ import { AlertIcon, ClockIcon, MailIcon, PhoneIcon, PinIcon } from '@/components
 export const metadata: Metadata = buildMetadata({
   title: 'Contact Kauffman Garage Doors | Gainesville, GA',
   description:
-    'Call (770) 554-9990 or send a service request. Garage door repair, installation and openers across North Georgia. Family owned since 1984.',
+    `Call ${business.phone.display} or send a service request. Garage door repair, installation and openers across North Georgia. Family owned since 1984.`,
   path: '/contact',
 })
 

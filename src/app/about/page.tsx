@@ -16,7 +16,7 @@ import Image from "next/image";
 export const metadata: Metadata = buildMetadata({
   title: 'About Kauffman Garage Doors | Family Run Since 1984',
   description:
-    'A small family run garage door company in Gainesville, GA. Over 40 years working on doors across North Georgia. Call (770) 554-9990.',
+    `A small family run garage door company in Gainesville, GA. Over 40 years working on doors across North Georgia. Call ${business.phone.display}.`,
   path: '/about',
 })
 

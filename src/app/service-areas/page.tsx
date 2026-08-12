@@ -16,7 +16,7 @@ import { PinIcon } from '@/components/icons'
 export const metadata: Metadata = buildMetadata({
   title: 'Service Areas | Garage Door Repair, North Georgia',
   description:
-    'We serve Gainesville, Flowery Branch, Oakwood, Buford, Cumming, Hoschton, Jefferson, Dawsonville, Cleveland and north Atlanta. Call (770) 554-9990.',
+    `We serve Gainesville, Flowery Branch, Oakwood, Buford, Cumming, Hoschton, Jefferson, Dawsonville, Cleveland and north Atlanta. Call ${business.phone.display}.`,
   path: '/service-areas',
 })
 

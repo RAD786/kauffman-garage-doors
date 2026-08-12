@@ -8,6 +8,8 @@
  * improve here. Add the subdivisions you actually work in most.
  */
 
+import { business } from './business'
+
 /**
  * A real photo for a city page. Same rules as ServiceImage in services.ts:
  * drop the file in /public/images/, reference it WITHOUT the "/public" prefix,
@@ -68,7 +70,7 @@ export const cities: City[] = [
     priority: 1.0,
     metaTitle: 'Garage Door Repair in Gainesville, GA | Kauffman',
     metaDescription:
-      'Garage door repair, installation and openers in Gainesville, GA. Family run in Hall County since 1984. Call (770) 554-9990.',
+      `Garage door repair, installation and openers in Gainesville, GA. Family run in Hall County since 1984. Call ${business.phone.display}.`,
     intro: [
       'Gainesville is home for us. We have been working on garage doors in Hall County since 1984, which means we have worked on doors in most parts of this town more than once — sometimes for the same family across two houses.',
       'Whatever your door is doing, we have almost certainly seen that exact failure on that exact model somewhere between Green Street and Chestnut Mountain. Springs, cables, openers, off-track doors, full replacements — call us and describe what it is doing.',
@@ -131,7 +133,7 @@ export const cities: City[] = [
     priority: 0.9,
     metaTitle: 'Garage Door Repair in Flowery Branch, GA | Kauffman',
     metaDescription:
-      'Garage door repair, springs, openers and new doors in Flowery Branch, GA. Family run North Georgia shop since 1984. Call (770) 554-9990.',
+      `Garage door repair, springs, openers and new doors in Flowery Branch, GA. Family run North Georgia shop since 1984. Call ${business.phone.display}.`,
     intro: [
       'Flowery Branch is a short run south of our home base in Gainesville, so it is one of the areas we cover most often. We handle garage door repair, spring replacement, opener work and full door replacement throughout the 30542 area.',
       'Whether you are in one of the newer subdivisions off Spout Springs Road or in an older house closer to the historic downtown, call and tell us what the door is doing.',
@@ -193,7 +195,7 @@ export const cities: City[] = [
     priority: 0.9,
     metaTitle: 'Garage Door Repair in Oakwood, GA | Kauffman',
     metaDescription:
-      'Garage door repair, opener service and new door installation in Oakwood, GA. Local Hall County family business since 1984. (770) 554-9990.',
+      `Garage door repair, opener service and new door installation in Oakwood, GA. Local Hall County family business since 1984. ${business.phone.display}.`,
     intro: [
       'Oakwood sits right between Gainesville and Flowery Branch, so it is about as close to our home base as a job gets. Repairs, springs, openers, new doors — we cover the whole 30566 area.',
       'Small town, straightforward work. Call us, tell us what the door is doing, and we will tell you what it needs.',
@@ -252,7 +254,7 @@ export const cities: City[] = [
     priority: 0.9,
     metaTitle: 'Garage Door Repair in Buford, GA | Kauffman',
     metaDescription:
-      'Garage door repair, spring replacement and installation in Buford, GA. Serving 30518 and 30519 since 1984. Call (770) 554-9990.',
+      `Garage door repair, spring replacement and installation in Buford, GA. Serving 30518 and 30519 since 1984. Call ${business.phone.display}.`,
     intro: [
       'Buford straddles the Gwinnett and Hall county line, and we work both sides of it. Garage door repair, broken springs, opener replacement and new door installation across 30518 and 30519.',
       'Call and describe the problem — most of the time we can narrow it down over the phone and bring the right parts on the first trip.',
@@ -313,7 +315,7 @@ export const cities: City[] = [
     priority: 0.9,
     metaTitle: 'Garage Door Repair in Cumming, GA | Kauffman',
     metaDescription:
-      'Garage door repair, openers, springs and new doors in Cumming and Forsyth County, GA. Family run since 1984. Call (770) 554-9990.',
+      `Garage door repair, openers, springs and new doors in Cumming and Forsyth County, GA. Family run since 1984. Call ${business.phone.display}.`,
     intro: [
       'We cover Cumming and the surrounding Forsyth County area — 30040, 30041 and 30028. Garage door repair, spring replacement, opener installation and full door replacement.',
       'Forsyth County has grown faster than almost anywhere in Georgia, and a lot of that growth is now old enough to need its first real garage door service. If your door is doing something it did not use to do, give us a call.',
@@ -375,7 +377,7 @@ export const cities: City[] = [
     priority: 0.8,
     metaTitle: 'Garage Door Repair in Hoschton, GA | Kauffman',
     metaDescription:
-      'Garage door repair, springs, openers and installation in Hoschton, GA and the 30548 area. Family run since 1984. Call (770) 554-9990.',
+      `Garage door repair, springs, openers and installation in Hoschton, GA and the 30548 area. Family run since 1984. Call ${business.phone.display}.`,
     intro: [
       'We serve Hoschton and the surrounding Jackson County area, including the neighborhoods around Braselton and Chateau Elan. Repairs, springs, openers and new door installation.',
       'Call us and describe what the door is doing. We will tell you what it likely is before we ever get in the truck.',
@@ -436,7 +438,7 @@ export const cities: City[] = [
     priority: 0.8,
     metaTitle: 'Garage Door Repair in Jefferson, GA | Kauffman',
     metaDescription:
-      'Garage door repair, spring replacement, openers and new doors in Jefferson, GA. Family run North Georgia shop since 1984. (770) 554-9990.',
+      `Garage door repair, spring replacement, openers and new doors in Jefferson, GA. Family run North Georgia shop since 1984. ${business.phone.display}.`,
     intro: [
       'Jefferson is the Jackson County seat, and we cover it and the surrounding area for garage door repair, spring replacement, opener work and new door installation.',
       'Houses in town, newer subdivisions, and shops and outbuildings out in the county — we handle all of it. Call and tell us what you have.',
@@ -496,7 +498,7 @@ export const cities: City[] = [
     priority: 0.8,
     metaTitle: 'Garage Door Repair in Dawsonville, GA | Kauffman',
     metaDescription:
-      'Garage door repair, springs, openers and new door installation in Dawsonville and Dawson County, GA. Since 1984. Call (770) 554-9990.',
+      `Garage door repair, springs, openers and new door installation in Dawsonville and Dawson County, GA. Since 1984. Call ${business.phone.display}.`,
     intro: [
       'We cover Dawsonville and Dawson County for garage door repair, spring replacement, opener service and new door installation.',
       'This is mountain country, and the properties out here are not all cookie-cutter. Call us with what you have and we will tell you how we would approach it.',
@@ -557,7 +559,7 @@ export const cities: City[] = [
     priority: 0.8,
     metaTitle: 'Garage Door Repair in Cleveland, GA | Kauffman',
     metaDescription:
-      'Garage door repair, spring replacement and new doors in Cleveland and White County, GA. Family run since 1984. Call (770) 554-9990.',
+      `Garage door repair, spring replacement and new doors in Cleveland and White County, GA. Family run since 1984. Call ${business.phone.display}.`,
     intro: [
       'We serve Cleveland and White County for garage door repair, springs, openers and new door installation.',
       'Cleveland is a straight run north from Gainesville, so it has been part of our territory for a long time. Call and tell us what the door is doing.',
@@ -618,7 +620,7 @@ export const cities: City[] = [
     priority: 0.7,
     metaTitle: 'Garage Door Repair in Atlanta, GA | Kauffman',
     metaDescription:
-      'Garage door repair, custom wood doors and installation in Atlanta and the north metro. A North Georgia family shop since 1984. (770) 554-9990.',
+      `Garage door repair, custom wood doors and installation in Atlanta and the north metro. A North Georgia family shop since 1984. ${business.phone.display}.`,
     intro: [
       'We work down into Atlanta and the north metro from our base in Gainesville. Garage door repair, spring replacement, opener installation, new doors and custom wood doors.',
       'Because Atlanta is the far end of our territory rather than the middle of it, call us first and tell us where you are and what you need. We will give you a straight answer about scheduling instead of a maybe.',

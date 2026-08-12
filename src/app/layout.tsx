@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     template: `%s | ${business.name}`,
   },
   description:
-    'Family owned garage door repair, installation and opener service in Gainesville and North Georgia. In business since 1984. Call (770) 554-9990.',
+    `Family owned garage door repair, installation and opener service in Gainesville and North Georgia. In business since 1984. Call ${business.phone.display}.`,
   applicationName: business.name,
   authors: [{ name: business.name }],
   creator: business.name,

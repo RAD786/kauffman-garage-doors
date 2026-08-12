@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { services, primaryServices, secondaryServices } from '@/data/services'
 // `services` is still used by the CollectionPage schema below.
 import { citiesByPriority } from '@/data/cities'
-import { absoluteUrl } from '@/data/business'
+import { absoluteUrl, business } from '@/data/business'
 import { buildMetadata } from '@/lib/seo'
 import { breadcrumbSchema, ORG_ID, type Crumb } from '@/lib/schema'
 
@@ -17,7 +17,7 @@ import { ArrowIcon } from '@/components/icons'
 export const metadata: Metadata = buildMetadata({
   title: 'Garage Door Services | Gainesville & North Georgia',
   description:
-    'Garage door repair, installation, openers, springs, custom wood doors, haul away and carport conversions across North Georgia. Call (770) 554-9990.',
+    `Garage door repair, installation, openers, springs, custom wood doors, haul away and carport conversions across North Georgia. Call ${business.phone.display}.`,
   path: '/services',
 })
 

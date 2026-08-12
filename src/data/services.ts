@@ -4,6 +4,8 @@
  * internal links from the city pages -- no other file needs to change.
  */
 
+import { business } from './business'
+
 export type ServiceFaq = { question: string; answer: string }
 
 /**
@@ -68,7 +70,7 @@ export const services: Service[] = [
     summary: 'Door off track, won’t close, loud grinding, broken cable — most repairs done in one visit.',
     metaTitle: 'Garage Door Repair | Gainesville & North Georgia',
     metaDescription:
-      'Garage door repair across North Georgia. Broken springs, off-track doors, cables, rollers and openers. Family run since 1984. Call (770) 554-9990.',
+      `Garage door repair across North Georgia. Broken springs, off-track doors, cables, rollers and openers. Family run since 1984. Call ${business.phone.display}.`,
     intro: [
       'A garage door is the heaviest moving thing in most houses, and when it quits it usually quits at the worst possible time — on the way to work, or with the car shut inside. We repair every part of the system: springs, cables, rollers, hinges, tracks, brackets, weather seal, and the opener itself.',
       'We have been doing this in Hall County and the surrounding counties since 1984. That means we have seen your door before. Most of what we run into is a wear item that can be replaced in a single visit, and we carry the common parts on the truck so you are not waiting a week on a spring.',
@@ -169,7 +171,7 @@ export const services: Service[] = [
     summary: 'New door measured, ordered and installed right — square, balanced and sealed to the opening.',
     metaTitle: 'Garage Door Installation | Gainesville & North GA',
     metaDescription:
-      'Garage door installation in Gainesville, Flowery Branch, Cumming and Buford. Correct measurement and properly sized springs. Call (770) 554-9990.',
+      `Garage door installation in Gainesville, Flowery Branch, Cumming and Buford. Correct measurement and properly sized springs. Call ${business.phone.display}.`,
     intro: [
       'Installation is where a garage door is won or lost. A good door hung wrong will bind, wear out its rollers, and burn up an opener. A correctly installed door is quiet, balanced, and stays that way for decades.',
       'We measure the rough opening, headroom, backroom and sideroom before anything is ordered, so the track and spring package actually fit your garage. Then we set the door square to the opening, size the springs to the finished weight of the door, and seal the perimeter.',
@@ -274,7 +276,7 @@ export const services: Service[] = [
     summary: 'Opener repair and new installs — belt, chain and wall-mount units, keypads, remotes and sensors.',
     metaTitle: 'Garage Door Opener Repair & Installation | North GA',
     metaDescription:
-      'Garage door opener repair and installation in North Georgia. Belt, chain and wall-mount units, sensors, remotes and keypads. Call (770) 554-9990.',
+      `Garage door opener repair and installation in North Georgia. Belt, chain and wall-mount units, sensors, remotes and keypads. Call ${business.phone.display}.`,
     intro: [
       'An opener is the part people notice most, because it is the part that talks back. It beeps, it flashes, it refuses to close, it wakes up the bedroom above the garage. We repair openers and install new ones.',
       'A lot of "opener problems" are not the opener. A door that is out of balance makes the opener work far harder than it was designed to, and the opener is just the thing that finally gave up. We check the door first, because replacing an opener on an unbalanced door will get you a second dead opener.',
@@ -375,7 +377,7 @@ export const services: Service[] = [
     summary: 'Broken spring? Do not run the opener. Torsion and extension springs replaced and balanced.',
     metaTitle: 'Garage Door Spring Replacement | North Georgia',
     metaDescription:
-      'Broken garage door spring replacement in North Georgia. Torsion and extension springs sized to your door, not guessed. Call (770) 554-9990.',
+      `Broken garage door spring replacement in North Georgia. Torsion and extension springs sized to your door, not guessed. Call ${business.phone.display}.`,
     intro: [
       'The springs do essentially all of the lifting. The opener only guides a door that the springs have already made nearly weightless. When a spring breaks, the door becomes a 150 to 400 pound slab with nothing holding it up.',
       'If you heard a bang like a gunshot from the garage, that was almost certainly a torsion spring. Leave the door down, do not run the opener, and call us.',
@@ -473,7 +475,7 @@ export const services: Service[] = [
     summary: 'Steel, insulated and carriage-house doors — measured to your opening, not to a catalog.',
     metaTitle: 'New Garage Doors | Gainesville & North Georgia',
     metaDescription:
-      'New garage doors for North Georgia homes. Insulated steel, carriage house and custom styles, measured and installed by a family shop. (770) 554-9990.',
+      `New garage doors for North Georgia homes. Insulated steel, carriage house and custom styles, measured and installed by a family shop. ${business.phone.display}.`,
     intro: [
       'A garage door is usually the largest single thing on the front of a house, so it does more for curb appeal than almost any other replacement you can make. It is also the one people put off the longest.',
       'We sell and install steel, insulated steel, and carriage-house style doors, along with custom wood if that is the direction you want to go. We are not a call center reading from a price sheet — we come look at the house and the opening.',
@@ -569,7 +571,7 @@ export const services: Service[] = [
     summary: 'Real wood carriage and custom doors built to your opening — for when a stamped steel door will not do.',
     metaTitle: 'Custom Wood Garage Doors | North Georgia',
     metaDescription:
-      'Custom wood garage doors built and installed across North Georgia. Carriage house, cedar and stained doors sized to your opening. (770) 554-9990.',
+      `Custom wood garage doors built and installed across North Georgia. Carriage house, cedar and stained doors sized to your opening. ${business.phone.display}.`,
     intro: [
       'Some houses need a real wood door. Lake Lanier homes, mountain houses up toward Cleveland and Dawsonville, farmhouses and craftsman builds — a stamped steel panel pretending to be wood does not do those elevations any favors.',
       'We build and install custom wood garage doors sized to your opening, in the style and stain you want. Carriage house with strap hardware, board-and-batten, stained cedar, painted panel — we work from what the house is asking for.',
@@ -668,7 +670,7 @@ export const services: Service[] = [
     summary: 'Old door and track removed safely — springs released, not cut — and hauled off your property.',
     metaTitle: 'Garage Door Removal & Haul Away | North Georgia',
     metaDescription:
-      'Safe garage door takedown and haul away in North Georgia. Springs released properly, track and hardware removed and hauled off. (770) 554-9990.',
+      `Safe garage door takedown and haul away in North Georgia. Springs released properly, track and hardware removed and hauled off. ${business.phone.display}.`,
     intro: [
       'Sometimes you just need the old door gone. A remodel, a demo, a door damaged past repair, or a garage being converted into living space. We take doors down and haul them off.',
       'The reason to call somebody for this is the springs. A torsion spring above the door holds a great deal of stored energy whether the door works or not, and cutting the cables on a loaded spring is how people get badly hurt. We release the tension properly, then take the door apart in sections.',
@@ -761,7 +763,7 @@ export const services: Service[] = [
     summary: 'Turn an open carport into a closed, lockable garage — opening framed, door installed, sealed up.',
     metaTitle: 'Carport to Garage Conversion | North Georgia',
     metaDescription:
-      'Convert your carport into a real garage in North Georgia. Opening framed, garage door installed, opener set up and sealed. Call (770) 554-9990.',
+      `Convert your carport into a real garage in North Georgia. Opening framed, garage door installed, opener set up and sealed. Call ${business.phone.display}.`,
     intro: [
       'Plenty of North Georgia houses were built with a carport instead of a garage. Closing one in is one of the better returns you can get on a house — you gain secure, dry, lockable space, and the front of the house usually looks better for it.',
       'The garage door side of that job is what we do. We handle the door opening: framing the header and jambs so the opening is square and can carry the door, installing the door and track, setting up the opener, and sealing the perimeter so it is actually weather-tight.',

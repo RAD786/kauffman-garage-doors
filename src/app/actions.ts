@@ -1,6 +1,7 @@
 'use server'
 
 import { deliverLead, validateLead, HONEYPOT_FIELD, type FormState } from '@/lib/leads'
+import { business } from '@/data/business'
 
 /**
  * Server action behind the lead form. Using an action rather than a client-side
@@ -66,7 +67,7 @@ export async function submitLead(prev: FormState, formData: FormData): Promise<F
     return {
       status: 'error',
       message:
-        'Something went wrong sending that. Please call us at (770) 554-9990 and we will take care of it.',
+        `Something went wrong sending that. Please call us at ${business.phone.display} and we will take care of it.`,
       errors: {},
       values: echo(),
       attempt,

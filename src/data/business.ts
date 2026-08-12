@@ -16,10 +16,10 @@ export const business = {
 
   phone: {
     /** Human-readable. Used in every visible label. */
-    display: '(770) 554-9990',
+    display: '770-555-0000',
     /** E.164. Used in tel: links and schema. */
-    href: 'tel:+17705549990',
-    raw: '+17705549990',
+    href: 'tel:+17705550000',
+    raw: '+17705550000',
   },
 
   email: 'rdkkauffman@gmail.com',
